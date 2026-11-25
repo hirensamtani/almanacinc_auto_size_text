@@ -176,6 +176,15 @@ SizedBox(
 )
 ```
 
+### Layout notes
+
+`AutoSizeText` uses a `LayoutBuilder` internally to measure the available space
+before sizing the text. Because of this, it should **not** be wrapped directly
+inside an `IntrinsicHeight` or `IntrinsicWidth`, which ask their child for an
+intrinsic size that a `LayoutBuilder` cannot provide (this throws at layout
+time). Give the widget bounded constraints instead — for example a `SizedBox`,
+an `Expanded`, or a fixed-size parent.
+
 ## Parameters
 
 Most parameters mirror Flutter's `Text` widget. Additional parameters:

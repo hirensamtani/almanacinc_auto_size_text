@@ -1,3 +1,11 @@
+## 1.0.1
+
+* Corrected the GitHub `repository` and `issue_tracker` URLs to
+  `https://github.com/hirensamtani/almanacinc_auto_size_text`.
+* Documented that `AutoSizeText` uses a `LayoutBuilder` internally and must not
+  be wrapped directly inside `IntrinsicHeight` or `IntrinsicWidth`; give it
+  bounded constraints (e.g. `SizedBox`, `Expanded`) instead.
+
 ## 1.0.0
 
 Initial release of `almanacinc_auto_size_text`, maintained by Almanac Inc.
