@@ -1,0 +1,48 @@
+import 'package:almanacinc_auto_size_text/almanacinc_auto_size_text.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+import 'utils.dart';
+
+void main() {
+  testWidgets('Preset font sizes', (tester) async {
+    await pumpAndExpectFontSize(
+      tester: tester,
+      expectedFontSize: 100,
+      widget: SizedBox(
+        width: 500,
+        height: 100,
+        child: AutoSizeText(
+          'XXXXX',
+          presetFontSizes: [100, 50, 5],
+        ),
+      ),
+    );
+
+    await pumpAndExpectFontSize(
+      tester: tester,
+      expectedFontSize: 50,
+      widget: SizedBox(
+        width: 300,
+        height: 100,
+        child: AutoSizeText(
+          'XXXXX',
+          presetFontSizes: [100, 50, 5],
+        ),
+      ),
+    );
+
+    await pumpAndExpectFontSize(
+      tester: tester,
+      expectedFontSize: 5,
+      widget: SizedBox(
+        width: 20,
+        height: 100,
+        child: AutoSizeText(
+          'XXXXX',
+          presetFontSizes: [100, 50, 5],
+        ),
+      ),
+    );
+  });
+}

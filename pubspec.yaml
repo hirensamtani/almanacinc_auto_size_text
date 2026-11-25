@@ -1,0 +1,23 @@
+name: almanacinc_auto_size_text
+description: >-
+  Flutter widget that automatically resizes text to fit perfectly within its
+  bounds. Modernized for Flutter 3.16+ with TextScaler support, maintained by
+  Almanac Inc.
+version: 1.0.0
+repository: https://github.com/almanacinc/almanacinc_auto_size_text
+issue_tracker: https://github.com/almanacinc/almanacinc_auto_size_text/issues
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:

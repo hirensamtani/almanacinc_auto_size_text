@@ -1,0 +1,20 @@
+# NOTE: when a .pubignore exists, pub uses it INSTEAD of .gitignore for
+# publishing, so every build/tooling artifact must be repeated here.
+
+# Build & tooling artifacts (large; must not ship).
+build/
+.dart_tool/
+/coverage/
+.flutter-plugins-dependencies
+**/doc/api/
+
+# Test fixtures (including locally-loaded font assets) are not needed by
+# consumers of the package.
+test/assets/
+test/_probe.out
+
+# IDE / tooling cruft.
+.idea/
+*.iml
+.metadata
+.DS_Store
